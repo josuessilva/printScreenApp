@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: PrintDelay
     steps:
       - uses: actions/checkout@v4
 
@@ -19,6 +22,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.5
+          build-root-directory: PrintDelay
 
       - name: Compilar APK (debug)
         run: gradle assembleDebug --no-daemon
@@ -26,4 +30,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: PrintDelay-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: PrintDelay/app/build/outputs/apk/debug/app-debug.apk
