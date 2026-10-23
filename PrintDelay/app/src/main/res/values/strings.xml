@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Print com Atraso</string>
+    <string name="service_label">Print com Atraso</string>
+    <string name="service_desc">Permite que o app Print com Atraso capture a tela depois do tempo escolhido. Ele não lê nem envia nada do que aparece na tela.</string>
+</resources>
